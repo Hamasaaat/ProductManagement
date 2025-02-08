@@ -1,13 +1,5 @@
-function Product(name, price, category) {
-  this.name = name;
-  this.price = price;
-  this.category = category;
-}
-Product.prototype.updateDetails = function (name, price, category) {
-  this.name = name;
-  this.price = price;
-  this.category = category;
-};
+import { Product } from "../Models/Product.js";
+
 
 const addButton = document.getElementById("add-btn");
 const cancelButton = document.getElementById("cancel-btn");
