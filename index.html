@@ -15,23 +15,26 @@
     <h2>Add New Product</h2>
     <form id="product-form">
       <input type="text" id="name" placeholder="Enter a product name" required>
-      <input type="number" id="price" placeholder="Enter a product price" required>
-      <select id="category">
+      <input type="number" id="price" step="0.01" placeholder="Enter a product price" required>
+      <select id="category" required> 
         <option>Book</option>
         <option>Electronics</option>
         <option>Shoes</option>
         <option>Food</option>
         <option>Drink</option>
       </select>
-      <button type="submit">Add Product</button>
+      <div class="form-actions">
+        <button type="button" id="add-btn">Add Product</button>
+        <button type="button" id="cancel-btn">Cancel</button>
+      </div>
     </form>
   </div>
 
-  <div id="products">
+  <div id="products" class="products-grid">
   </div>
 
 
-  <script src="script.js"></script>
+  <script src="script.js" defer></script>
 </body>
 
 </html>

@@ -1,7 +1,7 @@
 body {
   font-family: Arial, sans-serif;
   padding: 20px;
-  background-color:white;
+  background-color: white;
 }
 
 h1 {
@@ -14,7 +14,7 @@ h2 {
 }
 
 .products-container {
-  background-color:white;
+  background-color: white;
   padding: 20px;
   margin-bottom: 30px;
   border-radius: 8px;
@@ -27,7 +27,6 @@ h2 {
   margin: 0 auto;
 }
 
-
 .product-form {
   display: flex;
   flex-direction: column;
@@ -37,8 +36,15 @@ h2 {
   box-sizing: border-box;
 }
 
+form .form-actions {
+  display: flex;
+  gap: 10px;
+}
+
+
 input,
-button {
+button,
+select {
   width: 100%;
   padding: 10px;
   margin-bottom: 10px;
@@ -49,9 +55,12 @@ button {
   box-sizing: border-box;
 }
 
-input{
+input,
+select {
   max-width: 830px;
 }
+
+
 
 button {
   background-color: rgb(0, 115, 255);
@@ -66,16 +75,28 @@ button:hover {
 }
 
 #products {
-  display: flex;
-  flex-direction: column;
-  gap: 15px;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 15px;/* Space between the cards */
+  margin-top: 20px;
 }
 
 .product {
-  background-color: #fff;
+  width: 300px;
   padding: 15px;
+  text-align: center;
+  background-color: #fff;
+  border: 2px solid #ccc;
   border-radius: 8px;
+  box-sizing: border-box;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.product:hover{
+  transform: scale(1.1); 
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
 }
 
 .product h2 {
