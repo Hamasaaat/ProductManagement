@@ -87,7 +87,10 @@ export class ProductManager {
         );
 
         if (this.editingProductIndex !== null) {
-          this.products[this.editingProductIndex] = newProduct;
+           const productToUpdate = this.products[this.editingProductIndex];
+           productToUpdate.updateDetails(nameInput.value, priceInput.value, categoryInput.value); 
+          
+          
           //alert("Product updated successfully!");
         } else {
           this.products.push(newProduct);
