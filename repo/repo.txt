@@ -1,2 +1,0 @@
-repo: https://github.com/Hamasaaat/ProductManagement
-page:https://hamasaaat.github.io/ProductManagement/
